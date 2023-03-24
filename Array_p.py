@@ -67,3 +67,39 @@ month_exp['jun'] = 1980
 # you returned an item that you bought in a monthof april and got a refund of 200$. make a correction to your expense 
 month_exp['apr'] = month_exp['apr']  + 200
 print("the updated dictionary will be", month_exp)
+
+
+#                       EXCERCISE 02
+heros = ['spider man','thor','hulk','iron man','captain america']
+
+# questions 
+# 10 lenth of the list 
+print(len(heros))
+
+# 2) add 'black panther' at the end of the list 
+heros.append('balck panther')
+print('updated after added the black panther', heros)
+
+# 3) you realize tht you need to add hulk 'blacl panther' after 'hulk', so remove it from the list and then add 
+# it after 'hulk'
+# this code will remove it from the end of the list - 'black panther'
+heros.pop()
+
+heros.insert(3,'black panther')
+# priniting the list after updating it
+print(heros)
+
+#                       EXCERCISE 03 
+# create a list of all odd number between 1 and max number. Max number is something need to take from a user input()
+# function
+
+# taking input from the user - to take the integer number we have to specify the type before it 
+max_number = int(input("Enter the number:\n"))
+# declare empty list 
+list_num = []
+for i in range(max_number + 1):
+    if i%2 != 0:
+        list_num.append(i)
+
+
+print(list_num)
