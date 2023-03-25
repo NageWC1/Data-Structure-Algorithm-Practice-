@@ -113,6 +113,32 @@ class LinkedList:
         # i  put check is the next link address and originally the value show by programe for itr are same
         # cool its same
         print(llstr)
+    
+    def insert_after(self, data_after_at, data):
+        if data_after_at < 0 or data_after_at >= self.get_length():
+            raise Exception("Invalide index")
+        
+        count = 0
+        itr = self.head
+        while itr:
+            if count == data_after_at:
+                node = Node(data, itr.next)
+                itr.next = node
+
+            itr = itr.next
+            count += 1
+         
+    def remove_by_value(self, data):
+
+        count = 0       
+        itr = self.head
+
+        while itr:
+            if itr.data == data:
+                self.remove_at(count)
+            
+            itr = itr.next
+            count += 1
 
 if __name__ == '__main__':
     ll = LinkedList()
@@ -127,6 +153,9 @@ if __name__ == '__main__':
     ll.insert_at(0, 10)
     ll.insert_at(1, 10)
     ll.insert_at(0, 15)
+    ll.insert_after(1,100)
+    ll.print()
+    ll.remove_by_value(10)
     ll.print()
 
 
