@@ -1,0 +1,27 @@
+# going to implement the stack by the list or array 
+class stack_:
+    def __init__(self):
+        self.links_ = ['link1','link2','link3','link4',]
+        
+
+    def pop(self):
+        val =  self.links_[len(self.links_) - 1]
+        del self.links_[len(self.links_) - 1] 
+        return val
+    
+    def push(self, val):
+        self.links_.append(val)
+        return self.links_[len(self.links_) - 1]
+    
+    def print(self):
+        return self.links_
+    
+if __name__ == '__main__':
+    stack1 = stack_()
+    print(stack1.pop())
+    print(stack1.pop())
+    print(stack1.pop())
+    print(stack1.push(20))
+    print(stack1.print())
+
+
