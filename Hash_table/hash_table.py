@@ -64,9 +64,17 @@ if __name__ == '__main__':
     t = HashTable()
     t.get_hash('march 6')
 
-# adding the value to the hash table 
-# t.add('march 6', 130)
-t["march 6"] = 130 # instead passing the 2 argument in function we can use this by developing the python defaut function
-t["march 17"] = 500
+    # adding the value to the hash table 
+    # t.add('march 6', 130)
+    t["march 6"] = 130 # instead passing the 2 argument in function we can use this by developing the python defaut function
+    t["march 17"] = 500
 
-t.arr
+    print(t.arr)
+
+    # get the value from the tabel 
+    # t.get('march 6')
+    print(t['march 17'])
+
+    del t['march 6']
+
+    print(t.arr)
