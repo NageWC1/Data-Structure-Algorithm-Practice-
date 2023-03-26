@@ -2,6 +2,7 @@
 class stack_:
     def __init__(self):
         self.links_ = ['link1','link2','link3','link4',]
+        self.stack2 = []
         
 
     def pop(self):
@@ -22,8 +23,20 @@ class stack_:
     def size(self):
         return len(self.links_)
     
+    def revers_string(self,word_):
+        word_list = list(word_.strip())
+        num = len(word_list) - 1
+        stri_ = ''
+        while num >= 0:
+            stri_ += str(word_list[num])
+            num -= 1
+        return stri_
+    
 if __name__ == '__main__':
     stack1 = stack_()
+    word = 'We will conquere COVI-19'
+    word2 = 'I am the king'
+
     print(stack1.pop())
     print(stack1.pop())
     print(stack1.pop())
@@ -31,6 +44,10 @@ if __name__ == '__main__':
     print(stack1.print())
     print(stack1.is_empty())
     print(stack1.size())
+    print(stack1.revers_string(word))
+    print(stack1.revers_string(word2))
+
+
 
 
 
@@ -45,4 +62,6 @@ if __name__ == '__main__':
     print(stack)
     print(stack.pop())
     print(stack)
+
+    
 
