@@ -22,11 +22,14 @@ class TreeNode:
         level = 0 
         p = self.parent
         while p:
-            p += 1
+            level += 1
             p = p.parent
         return level
+    
     def print_tree(self):
-        print(self.data)
+        space  = " " * self.get_level() * 3
+        prefix = space + "|__" if self.parent else ""
+        print(prefix + self.data)
         if self.children:
             for child in self.children:
                 child.print_tree()
