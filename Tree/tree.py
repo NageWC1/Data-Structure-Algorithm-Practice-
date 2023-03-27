@@ -18,6 +18,19 @@ class TreeNode:
         child.parent = self 
         self.children.append(child)
 
+    def get_level(self):
+        level = 0 
+        p = self.parent
+        while p:
+            p += 1
+            p = p.parent
+        return level
+    def print_tree(self):
+        print(self.data)
+        if self.children:
+            for child in self.children:
+                child.print_tree()
+
 
 def build_general_tree():
     root = TreeNode('Electronic')
@@ -46,5 +59,5 @@ def build_general_tree():
 
 if __name__ == '__main__':
     root = build_general_tree()
-    print(root)
-    pass
+    root.print_tree()
+    
