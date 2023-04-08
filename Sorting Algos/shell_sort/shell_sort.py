@@ -30,3 +30,5 @@ if __name__ == "__main__":
     for elements in test:
         shell_sort(elements)
         print(f'The sorted array: {elements}')
+
+# exercise remove dupplicate elements 
